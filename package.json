@@ -1,0 +1,23 @@
+{
+  "name": "git_jenkins",
+  "version": "1.0.0",
+  "description": "git_jenkins",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pikeCol/git_jenkins.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pikeCol/git_jenkins/issues"
+  },
+  "homepage": "https://github.com/pikeCol/git_jenkins#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
