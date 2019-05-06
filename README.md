@@ -1,8 +1,9 @@
 # docker + jenkins 自动化部署
-> ## 为什么有docker
-+ 虚拟机太大了
-+ 复杂的环境，应用相互影响
-+ docker 
+> ## DevOps未死，ContainerOps已到
++ ContainerOps VS DevOps
+![图1](./img/2.jpg)
+  
+避免了复杂的环境，应用之间的相互影响
 > ## 撸前准备 docker
 + [docker download](https://www.docker.com/get-started)
 
