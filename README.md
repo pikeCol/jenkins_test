@@ -8,9 +8,11 @@
 + [docker download](https://www.docker.com/get-started)
 
 + [docker install for ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-+ docker image 镜像， 类似 node_moduels
   
+引入一些概念
++ 镜像只读的一个应用 (类似 node_modules 下面的包)
++ 容器可读写的镜像
+![图1](./img/5.jpg)
 > ## 开撸
 检验docker是否安装成功
 ```
@@ -19,11 +21,11 @@ docker  --version
 如果成功会有相应的版本号显示
 ![图1](./img/1.jpg)
 然后就可以去下载自己想下载的镜像了[docker registry(镜像仓库)](https://hub.docker.com/_/jenkins?tab=tags&page=1) 类似 npm 仓库
-也可以通过
+可以通过
 ```
 docker search
 ```
-来搜索镜像是否存在。接下来就是拉去镜像，默认的话docker 都会拉最新的镜像包，如果要拉取特定的版本在后面在，这边以Jenkins为例子。 
+来搜索镜像是否存在。接下来就是拉去镜像，默认的话docker 都会拉最新的镜像包，如果要拉取特定的版本在后面在，下载Jenkins。 
 ```
 docker pull jenkins/jenkins:lts
 ```
@@ -36,7 +38,7 @@ docker container 是docker的 image运行的容器。通过命令
 ```
 docker container run -d -p port:port --name=name -v mount:mount imageName
 
-docker run -d -p 8000:8080 --name=jenkins -v ~/Desktop/jkins/:/var/jenkins_home jenkins
+docker run -d -p 8000:8080 --name=jenkins -v ~/jenkins_node/:/var/jenkins_home jenkins/jenkins:lts
 ```
 + -d 后台运行
 + -p 运行端口修改
