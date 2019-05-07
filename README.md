@@ -80,6 +80,21 @@ docker build -t tagname .
 ```
 读取当前目录下面的dockerfile文件，并运行命令。
 
-> ## jenkins 部分
+> ## Jenkins 部分
+jenkin 这个按着提示的来就行，没啥特别大的难度，如果插件安装失败的 系统配置-> 插件管理  继续安装，和选择自己想要的插件来安装。（基本的node 和 git 一般都要装）
+![图1](./img/4.jpg)
 
-
+> ## 番外篇 [pm2](http://pm2.keymetrics.io/docs/usage/quick-start/)
+node进程管理工具,可以利用它来简化很多node应用管理的繁琐任务,如性能监控、自动重启、负载均衡等,上手容易。
+#### 安装及使用
+```
+npm install pm2 -g
+```
+pm2 start app.js (可选参数)
++ --watch：监听应用目录的变化，一旦发生变化，自动重启。如果要精确监听、不见听的目录，最好通过配置文件。
++ -i --instances：启用多少个实例，可用于负载均衡。如果-i 0或者-i max，则根据当前机器核数确定实例数目
++ --ignore-watch：排除监听的目录/文件，可以是特定的文件名，也可以是正则。比如--ignore-watch="test node_modules "some scripts""
++ -n --name：应用的名称。查看应用信息的时候可以用到。
++ -o --output \<path>：标准输出日志文件的路径。
++ -e --error \<path>：错误输出日志文件的路径。
++ --interpreter \<interpreter>：the interpreter pm2 should use for executing app (bash, python...)。比如你用的coffee script来编写应用。
