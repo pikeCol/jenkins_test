@@ -83,6 +83,8 @@ docker build -t tagname .
 读取当前目录下面的dockerfile文件，并运行命令。
 
 > ## Jenkins 部分
++ 插件安装的时候萌新就选推荐的插件安装就行。
++ 初始化密码如果不是挂在本地，需要执行docker exec -it (container id) /bin/bash 去里面找默认密码
 jenkin 这个按着提示的来就行，没啥特别大的难度，如果插件安装失败的 系统配置-> 插件管理  继续安装，和选择自己想要的插件来安装。（基本的node 和 git 一般都要装）
 ![图1](./img/4.jpg)
 
